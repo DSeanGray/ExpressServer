@@ -18,5 +18,8 @@ app.post('/set', function(req, res) {
   res.status(200).end();
 });
 
+app.get('/get', function(req, res) {
+  res.send(cache[req.query.key]);
+})
 
 module.exports = app
